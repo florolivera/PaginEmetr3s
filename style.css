@@ -1,0 +1,256 @@
+:root {
+  --clr-bg: #ffffff;
+  --clr-text: #1f2937;
+  --clr-primary: #fbbf24;
+  --clr-secondary: #374151;
+  --clr-accent: #fcd34d;
+  --radius: 1rem;
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --transition: 0.3s ease-in-out;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: var(--clr-text);
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--clr-accent);
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0;
+  text-align: center;
+  background: linear-gradient(to right, #fefce8, #fffbea);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.btn.primary {
+  background-color: var(--clr-primary);
+  color: #000;
+}
+
+.btn.secondary {
+  background-color: var(--clr-secondary);
+  color: #fff;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Section */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 280px;
+  transition: transform var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--clr-text);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+}
+
+/* Formulario de Contacto */
+.contact-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: var(--clr-text);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1.1em;
+  color: var(--clr-text);
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1em;
+  color: var(--clr-text);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--clr-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.contact-form button:hover {
+  background-color: #e9a500;
+  transform: scale(1.05);
+}
+
+#responseMessage {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+
+/* Animaciones */
+.animate-fadein {
+  animation: fadein 1s ease-in;
+}
+
+.animate-slideup {
+  animation: slideup 1s ease-in;
+}
+
+.animate-zoom {
+  animation: zoom 0.5s ease-in;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
